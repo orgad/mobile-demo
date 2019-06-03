@@ -1,0 +1,86 @@
+
+    <TabBar [barTintColor]="'white'"
+            [tintColor]="tintColor"
+            [unselectedTintColor]="unselectedTintColor"
+            [ngStyle]="tabbarStyle"
+            [activeTab]="selectedIndex"
+            [hidden]="hidden"
+            [tabBarPosition]="topFlag ? 'top' : 'bottom'"
+            (onPress)="tabBarTabOnPress($event)"
+    >
+      <TabBarItem [title]="'首页'"
+                  [key]="1"
+                  [badge]="0"
+                  [icon]="icon1"
+                  [selectedIcon]="icon11">
+        <ng-template #icon1>
+          <div style="width:22px;height: 22px;background: url('/assets/desktop.svg') center center / 21px 21px no-repeat;">
+          </div>
+        </ng-template>
+        <ng-template #icon11>
+          <div style="width:22px;height: 22px;background: url('/assets/desktop-on.svg') center center / 21px 21px no-repeat;">
+          </div>
+        </ng-template>
+        <div style="background-color: white; height: 100%; text-align: center">
+          <router-outlet></router-outlet>
+        </div>
+      </TabBarItem>
+      <TabBarItem [title]="'娱乐'"
+                  [key]="2"
+                  [badge]="'new'"
+                  [icon]="icon2"
+                  [selectedIcon]="icon22"
+      >
+        <ng-template #icon2>
+          <div style="width:22px;height: 22px;background: url('https://gw.alipayobjects.com/zos/rmsportal/BTSsmHkPsQSPTktcXyTV.svg') center center / 21px 21px no-repeat;">
+          </div>
+        </ng-template>
+        <ng-template #icon22>
+          <div style="width:22px;height: 22px;background: url('https://gw.alipayobjects.com/zos/rmsportal/ekLecvKBnRazVLXbWOnE.svg') center center / 21px 21px no-repeat;">
+          </div>
+        </ng-template>
+        <div style="background-color: white; height: 100%; text-align: center">
+          <div>娱乐</div>
+            <router-outlet name="ro2"></router-outlet>
+        </div>
+      </TabBarItem>
+      <TabBarItem [title]="'朋友'"
+                  [key]="3"
+                  [dot]="true"
+                  [icon]="icon3"
+                  [selectedIcon]="icon33">
+        <ng-template #icon3>
+          <div style="width:22px;height: 22px;background: url('https://zos.alipayobjects.com/rmsportal/psUFoAMjkCcjqtUCNPxB.svg') center center / 21px 21px no-repeat;">
+          </div>
+        </ng-template>
+        <ng-template #icon33>
+          <div style="width:22px;height: 22px;background: url('https://zos.alipayobjects.com/rmsportal/IIRLrXXrFAhXVdhMWgUI.svg') center center / 21px 21px no-repeat;">
+          </div>
+        </ng-template>
+        <div style="background-color: white; height: 100%; text-align: center">
+          <div style="padding-top: 60px">朋友排行</div>
+          <ng-container>
+          </ng-container>
+        </div>
+      </TabBarItem>
+      <TabBarItem [title]="'我的'"
+                  [key]="4"
+                  [icon]="icon4"
+                  [selectedIcon]="icon44">
+        <ng-template #icon4>
+          <div style="width:22px;height: 22px;background: url('https://zos.alipayobjects.com/rmsportal/asJMfBrNqpMMlVpeInPQ.svg') center center / 21px 21px no-repeat;">
+          </div>
+        </ng-template>
+        <ng-template #icon44>
+          <div style="width:22px;height: 22px;background: url('https://zos.alipayobjects.com/rmsportal/gjpzzcrPMkhfEqgbYvmN.svg') center center / 21px 21px no-repeat;">
+          </div>
+        </ng-template>
+        <div style="background-color: white; height: 100%; text-align: center">
+          <div style="padding-top: 60px">注销</div>
+          <ng-container>
+            
+          </ng-container>
+        </div>
+      </TabBarItem>
+    </TabBar>
+  

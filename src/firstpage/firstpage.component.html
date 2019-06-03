@@ -1,0 +1,20 @@
+
+  <WingBlank>
+    <Carousel [infinite]="true"
+              [vertical]="false"
+              [selectedIndex]="1"
+              (beforeChange)="beforeChange($event)"
+              (afterChange)="afterChange($event)"
+    >
+      <CarouselSlide *ngFor="let item of state.data">
+        <div style="display: inline-block; width: 100%;">
+          <img src="https://zos.alipayobjects.com/rmsportal/{{item}}.png" style=" pointer-events: none; width: 99%;"/>
+        </div>
+      </CarouselSlide>
+    </Carousel>
+  </WingBlank>
+  <!--<a href="/tabnav/exam">小测验</a>-->
+  <Grid [activeStyle]="false" [columnNum]="3" [data]="data"  (onClick)="click($event)">
+    
+  </Grid>
+  

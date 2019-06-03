@@ -1,0 +1,21 @@
+
+<div style="width:100px;margin: 5px" Button [type]="''" (onClick)="doExit()">
+返回
+</div>
+<div class="t">
+    {{timeText}}  
+</div>
+<div>第{{k+1}}题/共5题</div>
+    <div style="line-height:5;">{{title}}</div>
+        <List [renderHeader]=(renderHeader)>
+          <RadioItemGroup [(ngModel)]="selectedStatus1.value" (onChange)="onChange($event)">
+              <RadioItem *ngFor="let i of data2"
+                           [name]="i.name"
+                           [value]="i.value">
+                  {{i.name}}{{i.value}}
+              </RadioItem>
+          </RadioItemGroup>
+        </List>
+    <div style="text-align: center;width:100%;vertical-align:center;">
+    <div style="width:100px;margin: auto;" Button [type]="'primary'" (onClick)="doNext()">下一步</div>
+</div>
